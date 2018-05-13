@@ -42,14 +42,17 @@ public class Login extends BaseClass
 
             WebElement dropDown = driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > a"));
             dropDown.click();
-            List<WebElement> options = dropDown.findElements(By.tagName("li"));
-            System.out.println("Total selected rows are " + options.size());
 
-//            WebElement dd2 = driver.findElement(By.className("dropdown-toogle.navbar-icon-link.loginLink2"));
-   //         dd2.click();
             System.out.println(dropDown.getText());
 
-            driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > ul > li:nth-child(8) > a")).click();
+            WebElement logout = driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > ul > li:nth-child(8) > a"));
+
+            List<WebElement> options = logout.findElements(By.tagName("li"));
+            System.out.println("Total options are-THIS DOESN'T WORK " + options.size());
+
+            System.out.println(logout.getText());
+            logout.click();
+
 
 //            List<WebElement> options = dd2.findElements(By.tagName("li"));
             System.out.println(options);
