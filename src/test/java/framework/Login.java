@@ -49,6 +49,8 @@ public class Login extends BaseClass
 
             List<WebElement> options = logout.findElements(By.tagName("li"));
             System.out.println("Total options are-THIS DOESN'T WORK " + options.size());
+//          I think i found a list that will work. its one of the other job sites, maybe Indeed or Glassdoor.
+
 
             System.out.println(logout.getText());
             logout.click();
