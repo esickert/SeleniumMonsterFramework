@@ -47,17 +47,17 @@ public class Login extends BaseClass
 
             WebElement logout = driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > ul > li:nth-child(8) > a"));
 
-            List<WebElement> options = logout.findElements(By.tagName("li"));
-            System.out.println("Total options are-THIS DOESN'T WORK " + options.size());
+//            List<WebElement> options = logout.findElements(By.tagName("li"));
+//            System.out.println("Total options are-THIS DOESN'T WORK " + options.size());
 //          I think i found a list that will work. its one of the other job sites, maybe Indeed or Glassdoor.
 
 
-            System.out.println(logout.getText());
+//            System.out.println(logout.getText());
             logout.click();
 
 
 //            List<WebElement> options = dd2.findElements(By.tagName("li"));
-            System.out.println(options);
+//            System.out.println(options);
     }
 }
 
