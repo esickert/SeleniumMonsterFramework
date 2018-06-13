@@ -1,5 +1,6 @@
 package framework;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -9,9 +10,8 @@ import java.util.*;
 public class Login extends BaseClass
     //uses inheritance to login to
 {
-    @Test(description="This TC will perform valid login")
-    public void loginToApplication() throws Throwable
-    {
+    @Test(description = "This TC will perform valid login")
+    public void loginToApplication() throws Throwable {
 //            driver.findElement(By.name("txtUsername")).sendKeys("Admin1");
         driver.findElement(By.cssSelector("#EmailAddress")).sendKeys("esickert@gmail.com");
 
@@ -21,13 +21,16 @@ public class Login extends BaseClass
         driver.findElement(By.cssSelector("#btn-login")).click();
         Thread.sleep(5000);
 
+        System.out.println(driver.manage().getCookies());
+
         //           driver.navigate().back();   doesn't work
 
         Thread.sleep(5000);
-    }
+
+    }  //loginToApplication
 
 
-   @Test(description="This TC will perform invalid login",enabled = false)
+/*   @Test(description="This TC will perform invalid login",enabled = false)
     public void loginToApplication1()
     {
             driver.findElement(By.name("txtUsername")).sendKeys("admin1");
@@ -36,14 +39,16 @@ public class Login extends BaseClass
 
             driver.findElement(By.id("btn-Login")).click();
     }
+*/
 
-    @Test(description="This test case will logout")
-    public void logoutOfApplication()   {
+/*    @Test(description = "This test case will logout")
+    public void logoutOfApplication() {
 
-            WebElement dropDown = driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > a"));
-            dropDown.click();
+//        WebElement dropDown = driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > a"));
+        driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > a")).click();
+        dropDown.click();
 
-            System.out.println(dropDown.getText());
+        System.out.println("I am here inside logoutOfApplication line 46 " + dropDown.getText());
 
             WebElement logout = driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > ul > li:nth-child(8) > a"));
 
@@ -53,11 +58,13 @@ public class Login extends BaseClass
 
 
 //            System.out.println(logout.getText());
-            logout.click();
+ //       logout.click();
 
 
 //            List<WebElement> options = dd2.findElements(By.tagName("li"));
 //            System.out.println(options);
-    }
+*/
 }
+
+
 
