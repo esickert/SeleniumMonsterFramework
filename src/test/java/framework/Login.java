@@ -13,10 +13,10 @@ public class Login extends BaseClass
     @Test(description = "This TC will perform valid login")
     public void loginToApplication() throws Throwable {
 //            driver.findElement(By.name("txtUsername")).sendKeys("Admin1");
-        driver.findElement(By.cssSelector("#EmailAddress")).sendKeys("esickert@gmail.com");
+        driver.findElement(By.cssSelector("#EmailAddress")).sendKeys("test@paris.com");
 
 //            driver.findElement(By.id("txtPassword")).sendKeys("admin1");
-        driver.findElement(By.cssSelector("#Password")).sendKeys("Claude111");
+        driver.findElement(By.cssSelector("#Password")).sendKeys("Paris111");
 
         driver.findElement(By.cssSelector("#btn-login")).click();
         Thread.sleep(5000);
@@ -41,29 +41,18 @@ public class Login extends BaseClass
     }
 */
 
-/*    @Test(description = "This test case will logout")
+    @Test(description = "This test case will logout")
     public void logoutOfApplication() {
 
-//        WebElement dropDown = driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > a"));
-        driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > a")).click();
+        WebElement dropDown = driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > a"));
         dropDown.click();
 
         System.out.println("I am here inside logoutOfApplication line 46 " + dropDown.getText());
 
-            WebElement logout = driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > ul > li:nth-child(8) > a"));
-
-//            List<WebElement> options = logout.findElements(By.tagName("li"));
-//            System.out.println("Total options are-THIS DOESN'T WORK " + options.size());
-//          I think i found a list that will work. its one of the other job sites, maybe Indeed or Glassdoor.
-
-
-//            System.out.println(logout.getText());
- //       logout.click();
-
-
-//            List<WebElement> options = dd2.findElements(By.tagName("li"));
-//            System.out.println(options);
-*/
+        WebElement logout = driver.findElement(By.cssSelector("#mobile-navbar-search > ul > li > ul > li:nth-child(8) > a"));
+        System.out.println(logout.getText());
+        logout.click();
+    }
 }
 
 
